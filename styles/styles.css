@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+body {
+    min-height: auto;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.title-wrapper {
+    margin: 80px auto;
+}
+
+/* <weight>: Use a value from 200 to 800 */
+h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: white;
+    font-size: 60px;
+}
