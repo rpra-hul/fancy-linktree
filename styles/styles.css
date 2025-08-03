@@ -1,25 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+
+:root {
+    --title-font: "Noto Sans", sans-serif;
+    --text-font: "Bricolage Grotesque", sans-serif;
+    --text-colour: #e0e0e0;
+}
+
+html, body{
+    height: 100%;
+    background-image: url("../images/background.png");
+    background-size: cover;
+}
 
 body {
     min-height: auto;
-    background-image: url("../images/background.png");
-    background-size: cover;
+    font-family: var(--text-font);
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: var(--text-colour);
+}
+
+.title-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.title-wrapper {
-    margin: 80px auto;
+h1 {
+    font-family: var(--title-font);
+    font-weight: 800;
+    font-size: 2.8em;
 }
 
-/* <weight>: Use a value from 200 to 800 */
-h1 {
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    color: white;
-    font-size: 60px;
+/* nav bar */
+.main-nav {
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+}
+
+.nav-link {
+    color: var(--text-colour);
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 0 1.5em;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-link.current {
+    color: aqua;
 }
