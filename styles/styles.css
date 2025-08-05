@@ -1,25 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --title-font: "IBM Plex Mono", monospace;
+    --text-font: "Inter", sans-serif;
+    --title-colour: #e0e0e0;
+    --text-colour: #999999;
+    --primary-accent: #00FFFF;
+}
+
+html {
+    font-size: 16px;
+}
+
+html, body{
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+}
 
 body {
     min-height: auto;
-    background-image: url("../images/background.png");
-    background-size: cover;
+    font-family: var(--text-font);
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: var(--text-colour);
+}
+
+.title-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.title-wrapper {
-    margin: 80px auto;
+h1 {
+    font-family: var(--title-font);
+    font-weight: 800;
+    font-size: 3.25rem;
+    color: var(--title-colour);
 }
 
-/* <weight>: Use a value from 200 to 800 */
-h1 {
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    color: white;
-    font-size: 60px;
+/* top nav bar */
+.main-nav {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav > div {
+    display: flex;
+}
+
+.nav-link {
+    color: var(--text-colour);
+    text-align: right;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 1.5rem 1rem 0rem 1rem;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-link.current {
+    color: var(--primary-accent);
+}
+
+.nav-link.home {
+    text-align: left;
+
 }
