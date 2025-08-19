@@ -7,6 +7,10 @@
     --title-colour: #e0e0e0;
     --text-colour: #999999;
     --primary-accent: #00FFFF;
+
+    --section-max-width: 60ch;
+    --section-width: min(var(--section-max-width), 100%);
+    --section-margin: calc(calc(100vw - var(--section-width)) // 2)
 }
 
 html {
@@ -15,7 +19,7 @@ html {
 
 html, body{
     height: 100%;
-    background-color: black;
+    background-color: #242424;
     background-size: cover;
 }
 
@@ -27,18 +31,6 @@ body {
     font-variation-settings:
         "wdth" 100;
     color: var(--text-colour);
-}
-
-.title-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-h1 {
-    font-family: var(--title-font);
-    font-weight: 800;
-    font-size: 3.25rem;
-    color: var(--title-colour);
 }
 
 /* top nav bar */
@@ -71,5 +63,19 @@ h1 {
 
 .nav-link.home {
     text-align: left;
+}
 
+/* main content */
+.home-content {
+    font-size: 1.25rem;
+    font-weight: 400;
+    max-width: var(--section-width);
+    margin: 7rem auto;
+}
+
+.home-content > h1 {
+    font-family: var(--title-font);
+    font-size: 3.25rem;
+    font-weight: 800;
+    color: var(--title-colour);
 }
